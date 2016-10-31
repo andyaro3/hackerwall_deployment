@@ -4,7 +4,7 @@ var bodyParser = require('body-parser')
 var hbs = require('express-handlebars')
 var mongoose = require('mongoose')
 
-MONGOLAB_URI='mongodb://clovett:duders12@ds139847.mlab.com:39847/hackerwall'
+var MONGOLAB_URI='mongodb://clovett:duders12@ds139847.mlab.com:39847/hackerwall'
 
 
 // Here we find an appropriate database to connect to, defaulting to
