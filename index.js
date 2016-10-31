@@ -17,7 +17,7 @@ var mongoose = require('mongoose')
 
  // The http server will listen to an appropriate port, or default to
  // port 3000.
- var theport = process.env.PORT || 3000;
+ // var theport = process.env.PORT || 3000;
 
  // Makes connection asynchronously.  Mongoose will queue up database
  // operations and release them when the connection is complete.
@@ -105,7 +105,7 @@ app.post('/posts', function( req , res ) {
 
 })
 
-app.listen( 3000, function() {
+app.listen( process.env.PORT || 3000, function() {
 
   console.log( 'listening on 3000' )
 
