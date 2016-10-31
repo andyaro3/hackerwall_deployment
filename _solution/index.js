@@ -5,17 +5,8 @@
  var mongoose = require('mongoose')
 
 
-// Here we find an appropriate database to connect to, defaulting to
- // localhost if we don't find one.
+// Here we find an appropriate database to connect to
  var uristring = "mongodb://heroku_4b90s6m1:roeiso6s6840c1qbt8elvbbgh1@ds011873.mlab.com:11873/heroku_4b90s6m1"
-
- // process.env.MONGOLAB_URI ||
- // process.env.MONGOHQ_URL ||
- // 'mongodb://localhost:27017/hackerwall-solution';
-
- // The http server will listen to an appropriate port, or default to
- // port 5000.
- var theport = process.env.PORT || 3000;
 
  // Makes connection asynchronously.  Mongoose will queue up database
  // operations and release them when the connection is complete.
@@ -100,7 +91,7 @@
 
  })
 
- app.listen( 3000, function() {
+ app.listen( process.env.PORT || 3000, function() {
 
    console.log( 'listening on 3000' )
 
